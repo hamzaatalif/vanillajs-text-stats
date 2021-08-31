@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Statistics - VanillaJS</title>
+  <script src="./index.js" defer></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!--
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="./css/style.css">-->
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="container">
+
+      <nav id="main-nav" class="flex items-cen justify">
+
+        <div class="left flex items-cen text-center">
+          <a href="#" style="font-size:22px; font-weight: bold;">Text Statistics</a>
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+  </nav>
+  </div>
+  <div class="alert alert-success fade show text-center" role="alert">
+    <strong>Welcome to Text Statistics!</strong>
+  </div>
+  <div class="inp justify-content-center">
+
+    <p class="text-center">Enter your text and format!!</p>
+
+    <textarea id="txt" cols="130" rows="5" style="width: 80%;  
+        line-height: 20px"></textarea><br>
+    <div class="inputfile text-center">
+      <p>(or)</p>
+    </div>
+    <div class="d-flex inputfile1 justify-content-center">
+      <input type="file" name="inputfile" id="inputfile" accept=".txt">
+      <br>
+    </div>
+    <br>
+    <div class="i text-center">Please upload only .txt files</div>
+    <br>
+    <br>
+
+  </div>
+
+
+  <div class="func">
+
+    <label class="switch">
+      <input type="checkbox" id="0" unchecked>
+      <span class="slider round"></span>
+    </label>
+    <label>Convert text into UPPER CASE</label><br>
+
+    <label class="switch">
+      <input type="checkbox" id="1" unchecked>
+      <span class="slider round"></span>
+    </label>
+
+    <label>Convert text into lower case</label><br>
+    <label class="switch">
+      <input type="checkbox" id="2" unchecked>
+      <span class="slider round"></span>
+    </label>
+    <label>Frequency of each Word</label><br>
+    <label class="switch">
+      <input type="checkbox" id="3" unchecked>
+      <span class="slider round"></span>
+    </label>
+    <label>Character Count</label><br>
+    <label class="switch">
+      <input type="checkbox" id="4" unchecked>
+      <span class="slider round"></span>
+    </label>
+    <label>Word Count</label><br>
+    <label class="switch">
+      <input type="checkbox" id="5" unchecked>
+      <span class="slider round"></span>
+    </label>
+    <label>Number of lines in Text</label><br>
+  </div>
+  <button class="btn" onclick="analyze()">Format</button>
+  <br>
+  <br>
+
+
+  <p id="demo" class="text-center"></p>
+
+</body>
+
+</html>
