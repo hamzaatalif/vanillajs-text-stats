@@ -51,18 +51,21 @@ function analyze() {
         document.getElementById("demo").innerHTML += "<br>";
         document.getElementById("demo").innerHTML += "---------------------------------------------------<br>";
     }
-    if (isChecked2.checked == true) {
-        let textInputValue = Array.from(document.querySelector("#txt").value);
-        let words = [];
-        textInputValue.forEach((char)=>{
-            if (char == "" || char == " " || char == "." || char == "\n" ) {
-                let newWord = textInputValue.slice(0,Number(textInputValue.indexOf(char)))
-                words.push(newWord);
-            }
-        })
-        console.log(words.length+1);
 
+    if (isChecked2.checked == true) {
+        let textInputValue = document.querySelector("#txt").value;
+        let allWords = textInputValue.split(/ |\n/);          
+        allWords.forEach((word)=>{
+            let counter = 0;      
+            allWords.forEach((innerWord)=>{
+                if (word === innerWord){
+                    counter++;
+                }
+            })
+            console.log(`${word}: ${counter}`)
+        })
     }
+
     // if (isChecked2.checked == true) {
 
     //     var map1 = new Map();
